@@ -1,5 +1,3 @@
-/* Theme: https://github.com/catppuccin/catppuccin */
-
 html {
     /* make scrollbar overlay over the content, not taking up any space */
     overflow-y: overlay;
@@ -58,13 +56,13 @@ body.dark {
     --color: #e5e5e5;
     --color-semi-trans: rgba(229, 229, 229, 0.4);
     --warning: #e5c890;
-    --accent: #eebebe;
+    --accent: #3c7cde;
     --accent-semi-trans: rgba(238, 190, 190, 0.2);
     --accent-rgb: 238, 190, 190;
 }
 
 html {
-    font-family: Inter, system-ui, sans-serif;
+    font-family: Rubik, system-ui, sans-serif;
 }
 
 p {
@@ -73,8 +71,8 @@ p {
 }
 
 @font-face {
-    font-family: "Inter";
-    src: url("/fonts/Inter.var-subset.woff2") format("woff2");
+    font-family: "Rubik";
+    src: url("/fonts/Rubik-VariableFont_wght.ttf") format("truetype");
     font-weight: 100 900;
     font-display: swap;
     font-style: normal;

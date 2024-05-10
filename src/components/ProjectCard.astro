@@ -21,8 +21,7 @@ const stars =
 const avatarUrl = new URL(owner.avatar_url);
 avatarUrl.searchParams.set("size", "64");
 ---
-
-<a href={html_url}>
+<a href={html_url} target="_blank">
     <span class="open-external">
         <OpenExternalIcon />
     </span>

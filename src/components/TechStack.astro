@@ -3,104 +3,78 @@ const stack = {
     Backend: [
         {
             name: "Go",
+            skillicon: "GoLang",
             url: "https://go.dev",
         },
         {
-            name: "Crystal",
-            url: "https://crystal-lang.org/",
-        },
-        {
-            name: "Node.js",
-            url: "https://nodejs.dev",
-        },
-        {
-            name: "Java",
-            url: "https://www.java.com",
-        },
-        {
             name: "Python",
-            url: "https://www.python.org",
-        },
-    ],
-
-    Frontend: [
-        {
-            name: "TypeScript",
-            url: "https://www.typescriptlang.org",
-        },
-        {
-            name: "SCSS",
-            url: "https://sass-lang.com",
-        },
-
-        {
-            name: "Astro",
-            url: "https://astro.build",
-        },
-        {
-            name: "React",
-            url: "https://react.dev",
-        },
-        {
-            name: "Svelte",
-            url: "https://svelte.dev",
-        },
-    ],
-
-    Native: [
-        {
-            name: "Electron",
-            url: "https://www.electronjs.org",
-        },
-        {
-            name: "Android",
-            url: "https://www.android.com",
-        },
-        {
-            name: "Kotlin",
-            url: "https://kotlinlang.org",
-        },
-        {
-            name: "Flutter",
-            url: "https://flutter.dev",
-        },
+            skillicon: "Python-Dark",
+            url: "https://python.org/",
+        }
     ],
 
     Databases: [
         {
-            name: "PostgreSQL",
-            url: "https://www.postgresql.org",
-        },
-        {
-            name: "SQLite",
-            url: "https://www.sqlite.org",
+            name: "MongoDB",
+            skillicon: "MongoDB",
+            url: "https://www.mongodb.com",
         },
     ],
 
     Linux: [
         {
-            name: "Docker",
-            url: "https://www.docker.com",
-        },
-
-        {
-            name: "Bash",
-            url: "https://www.gnu.org/software/bash",
-        },
-        {
             name: "Debian",
+            skillicon: "Debian-Dark",
             url: "https://www.debian.org",
         },
         {
-            name: "Fedora",
-            url: "https://fedoraproject.org",
+            name: "Docker",
+            skillicon: "Docker",
+            url: "https://www.docker.com",
         },
         {
-            name: "Caddy",
-            url: "https://caddyserver.com",
+            name: "Bash",
+            skillicon: "Bash-Dark",
+            url: "https://www.gnu.org/software/bash",
         },
     ],
-};
+
+    DevOps: [
+        {
+            name: "GitHub Actions",
+            skillicon: "GithubActions-Dark",
+            url: "https://github.com/features/actions",
+        },
+        {
+            name: "Jenkins",
+            skillicon: "Jenkins-Dark",
+            url: "https://www.jenkins.io",
+        },
+    ],
+
+    Cloud: [
+        {
+            name: "Cloudflare",
+            skillicon: "Cloudflare-Dark",
+            url: "https://www.cloudflare.com",
+        },
+        {
+            name: "Google Cloud Platform",
+            skillicon: "GCP-Dark",
+            url: "https://cloud.google.com",
+        },
+        {
+            name: "Azure",
+            skillicon: "Azure-Dark",
+            url: "https://azure.microsoft.com",
+        },
+        {
+            name: "Vercel",
+            skillicon: "Vercel-Dark",
+            url: "https://vercel.com",
+        },
+    ],
+}
 ---
 
 <div>
@@ -109,10 +83,10 @@ const stack = {
             <section>
                 <h3>{name}</h3>
                 <div class="items">
-                    {items.map(({ name, url }) => (
-                        <a href={url}>
-                            <img
-                                src={`/assets/stack/${name.toLowerCase()}.svg`}
+                    {items.map(({ name, url, skillicon }) => (
+                        <a href={url} target="_blank">
+                            <img 
+                                src={`https://cdn.jsdelivr.net/gh/tandpfun/skill-icons@main/icons/${skillicon}.svg`}
                                 title={name}
                             />
                         </a>

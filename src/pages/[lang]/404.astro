@@ -14,14 +14,6 @@ const t = await loadStrings(Astro.params.lang, true);
     <CenteredBody>
         <h1>{t("404.title")}</h1>
         <h3>{t("404.notFound")}</h3>
-        <p>{t("404.lost")}</p>
-        <p>{t("404.goHome")}</p>
-        <a href="/">
-            <img
-                src="https://cdn.discordapp.com/emojis/432715085526597634.webp"
-                alt={t("404.koishiAlt")}
-            />
-        </a>
     </CenteredBody>
 </Layout>
 

@@ -7,7 +7,7 @@ export interface Props {
     title: string;
 }
 
-const routes = ["about", "contact", "blog"] as const;
+const routes = ["about", "contact"] as const;
 
 const { lang } = Astro.params;
 
@@ -31,7 +31,6 @@ const t = await loadStrings(lang, true);
         <ThemeToggle client:load />
         <LanguagePicker />
     </div>
-    <div id="oneko" aria-hidden="true"></div>
 </nav>
 
 <style lang="scss">
@@ -86,29 +85,6 @@ const t = await loadStrings(lang, true);
         float: left;
     }
 
-    #oneko {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        width: 32px;
-        height: 32px;
-        right: 2rem;
-        top: 1.3rem;
-        image-rendering: pixelated;
-        /* https://raw.githubusercontent.com/adryd325/oneko.js/14bab15a755d0e35cd4ae19c931d96d306f99f42/oneko.gif */
-        background-image: url("/assets/oneko.gif");
-        animation: sleep 1s infinite;
-        cursor: pointer;
-
-        &:hover {
-            animation: 2.5s 1 forwards wakeup;
-        }
-
-        @media (prefers-reduced-motion) {
-            display: none;
-        }
-    }
-
     @media only screen and (max-width: 600px) {
         ul {
             width: 100%;
@@ -119,12 +95,6 @@ const t = await loadStrings(lang, true);
 
         nav {
             padding-bottom: 1.5em;
-        }
-    }
-
-    @media only screen and (max-width: 375px) {
-        #oneko {
-            display: none;
         }
     }
 
